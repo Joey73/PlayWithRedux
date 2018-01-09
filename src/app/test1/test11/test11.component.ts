@@ -8,7 +8,6 @@ import { IAppState } from '../../store';
   styleUrls: ['./test11.component.css']
 })
 export class Test11Component implements OnInit {
-  //@select() entries;
   @select() entry;
   @select() lastUpdate; 
 
