@@ -1,0 +1,10 @@
+<h1>test1</h1>
+<p>
+  <input type="text" #text1>
+  <input type="text" #text2>
+  <input type="text" #text3>
+  <button (click)="add(text1, text2, text3)">Add</button>
+</p>
+Result:
+{{ (entry | async).text1 }} - {{ (entry | async).text2 }} - {{ (entry | async).text3 }} - Last Update: {{ (lastUpdate | async) | date:'mediumTime' }}
+<app-test11></app-test11>
