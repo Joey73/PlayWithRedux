@@ -1,27 +1,27 @@
 import { tassign } from 'tassign'; 
-import { ADD } from './actions';
-import { Entry } from './entry';
+import { ADD_TEST1 } from './actions';
+import { Test1Entry } from './test1.entry';
 
 export interface IAppState {
-  entry: Entry | null;
-  lastUpdate: Date; 
+  test1Entry: Test1Entry | null;
+  test1LastUpdate: Date; 
 }
 
 export const INITIAL_STATE: IAppState = { 
-  entry: new Entry('','',''),
-  lastUpdate: null
+  test1Entry: new Test1Entry('','',''),
+  test1LastUpdate: null
 }
 
 export function rootReducer(state: IAppState, action): IAppState {
   switch (action.type) {
-    case ADD:
-      var newEntry = new Entry(action.text1, action.text2, action.text3);
-      console.log('rootReducer - newEntry: ' + newEntry);
+    case ADD_TEST1:
+      var newTest1Entry = new Test1Entry(action.text1, action.text2, action.text3);
+      console.log('rootReducer - newTest1Entry: ' + newTest1Entry);
       return tassign(
         state,
         {
-          entry: newEntry,
-          lastUpdate: new Date()
+          test1Entry: newTest1Entry,
+          test1LastUpdate: new Date()
         }
       );
   }

@@ -8,8 +8,8 @@ import { IAppState } from '../../store';
   styleUrls: ['./test11.component.css']
 })
 export class Test11Component implements OnInit {
-  @select() entry;
-  @select() lastUpdate; 
+  @select() test1Entry;
+  @select() test1LastUpdate; 
 
   constructor(private ngRedux: NgRedux<IAppState>) { }
 

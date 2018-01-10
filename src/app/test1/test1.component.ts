@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgRedux, select } from '@angular-redux/store'; 
-import { ADD } from '../actions'; 
+import { ADD_TEST1 } from '../actions'; 
 import { IAppState } from '../store'; 
 
 @Component({
@@ -9,8 +9,8 @@ import { IAppState } from '../store';
   styleUrls: ['./test1.component.css']
 })
 export class Test1Component implements OnInit {
-  @select() entry;
-  @select() lastUpdate; 
+  @select() test1Entry;
+  @select() test1LastUpdate; 
 
   constructor(private ngRedux: NgRedux<IAppState>) { }
 
@@ -21,6 +21,6 @@ export class Test1Component implements OnInit {
     console.log('input1.value: ' + input1.value);
     console.log('input2.value: ' + input2.value);
     console.log('input3.value: ' + input3.value);
-    this.ngRedux.dispatch({ type: ADD, text1: input1.value, text2: input2.value, text3: input3.value });
+    this.ngRedux.dispatch({ type: ADD_TEST1, text1: input1.value, text2: input2.value, text3: input3.value });
   }
 }
