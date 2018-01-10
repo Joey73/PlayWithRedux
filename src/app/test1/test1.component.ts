@@ -11,6 +11,8 @@ import { IAppState } from '../store';
 export class Test1Component implements OnInit {
   @select() test1Entry;
   @select() test1LastUpdate; 
+  @select() test2Entry;
+  @select() test2LastUpdate; 
 
   constructor(private ngRedux: NgRedux<IAppState>) { }
 

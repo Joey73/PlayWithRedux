@@ -1,3 +1,10 @@
 <h1>test2</h1>
-Result:
-{{ (test1Entry | async).text1 }} - {{ (test1Entry | async).text2 }} - {{ (test1Entry | async).text3 }} - Last Update: {{ (test1LastUpdate | async) | date:'mediumTime' }}
+<p>
+    <input type="text" #text1>
+    <input type="text" #text2>
+    <input type="text" #text3>
+    <button (click)="add(text1, text2, text3)">Add</button>
+</p>
+Results Test1: {{ (test1Entry | async).text1 }} - {{ (test1Entry | async).text2 }} - {{ (test1Entry | async).text3 }} - Last Update: {{ (test1LastUpdate | async) | date:'mediumTime' }}
+<br>
+Results Test2: {{ (test2Entry | async).text1 }} - {{ (test2Entry | async).text2 }} - {{ (test2Entry | async).text3 }} - Last Update: {{ (test2LastUpdate | async) | date:'mediumTime' }}
